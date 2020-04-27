@@ -1,0 +1,360 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    color: black;
+}
+.page_container {
+    display: grid;
+    grid-template-columns: 2% 20% 2% auto 4%;
+    grid-template-rows: 2% 5% 10% 2% 5% 2% auto 2% 5% 3%;
+    width: 100%;
+    height: 100vh;
+}
+.header {
+    display: grid;
+    font-weight: 300;
+    font-size: medium;
+    text-align: center;
+    grid-column: 2/5;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+.logo {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    width: 100%;
+    height: 100%;
+}
+img.congress {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    width: 100%;
+    height: 100%;
+}
+.navtop {
+    grid-column: 2/5;
+    grid-row: 5/6;
+}
+.navbar {
+    border: 2px solid silver;
+    border-radius: 1em;
+    align-content: space-around;
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+}
+.navbar-brand {
+    font-size: 8px;
+}
+#navbarDropdownMenuLink {
+    color: black;
+    font-size: 8px;
+}
+ul.dropdown-menu.show {
+    background-color: silver;
+    min-width: 6rem;
+}
+a.dropdown-item {
+    font-size: 12px;
+    padding-right:5px;
+}
+li {
+    list-style: none;
+}
+.content, .content_tables {
+    margin-top:15%;
+    text-align: justify;
+    grid-column: 2/5;
+    grid-row: 7/8;
+    font-size:small;
+}
+.content_tables {
+    display: flex;
+    flex-direction: column;
+}
+.card-header {
+    height:60px;
+}
+.btn.btn-link {
+    background-color: lightblue;
+    font-style: italic;
+    font-size: medium;
+    width: 100%;
+}
+h2 {
+    font-size: 2em;
+}
+.idTables {
+    margin-top: 25px;
+}
+thead {
+    width: 100%;
+    font-size: 8px;
+    color: white;
+    text-align: center;
+    font-weight: normal;
+}
+#select_party.filter.navbar-toggler, #select_state.filter.navbar-toggler {
+    background-color: lightblue;
+    font-size: 1em;
+    border-radius: 0.5em;
+    border: 1px solid silver;
+}
+ul.navbar-nav.mr-auto, select#state-selector {
+    border: 1px solid blanchedalmond;
+    border-radius: 1em;
+    background-color:silver;
+    color: black;
+    font-size: 10px;
+}
+.table {
+    height:500px;
+    table-layout: fixed;
+}
+tbody {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 200px;
+    width: 100%;
+}
+tbody#table_data.loading-table {
+    height: 500px;
+}
+.table_senate_house_top {
+    height: 100%;
+}
+tr {
+    width: 100%;
+    display: flex;
+}
+tr.last_line {
+    font-weight: bold;
+    background-color: lightblue;
+    font-size: medium;
+}
+td, th {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+.table_at_a_glance_by_party.table-sm.table-striped {
+    width: 100%;
+    height: 100%;
+}
+.table_at_a_glance_by_party th.senate_house_th {
+    color: white;
+    background-color: #212529;
+    width:33%;
+    font-size: 8px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#table_dataAttendance1 {
+    overflow-y: hidden;
+}
+td.senate_house_td {
+    align-content: center;
+    width: 33%;
+}
+.table_at_a_glance_by_party td {
+    width: 33%;
+}
+#loading {
+    width:100%;
+    height:50px;
+    padding-bottom:30%;
+    position: relative;
+    justify-content: center;
+}
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background:lightskyblue;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+@keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+}
+@keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+}
+.footer {
+    border: 1px solid black;
+    grid-column: 2/5;
+    grid-row: 9/10;
+    background-color: rgb(230, 230, 230);
+    text-align: center;
+    font-style: italic;
+    font-size: 1em;
+    bottom: 10px;
+    border-radius: 1rem;
+}
+
+@media (min-width: 765px) {
+    .page_container {
+        display: grid;
+        grid-template-columns: 2% 20% 2% auto 4%;
+        grid-template-rows: 3% 5% 15% 2% 5% 2% auto 2% 5% 3%;
+        width: 100%;
+        height: 100vh;
+    }
+    .header {
+        font-weight: 600;
+        font-size: 2em;
+        text-align: center;
+        grid-column: 2/5;
+        grid-row: 2/3;
+        width: 100%;
+        height: 100%;
+    }
+    .btn.btn-link {
+        font-size: 1em;
+    }
+    #navbarDropdownMenuLink {
+        font-size: 1em;
+    }
+    a.dropdown-item {
+        font-size: 1.15em;
+    }
+    .content, .content_tables {
+        margin-top: 6%;
+    }
+    .content_tables {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #accordionExample.accordion {
+        width: 100%;
+    }
+    .table1 {
+        width: 30%;
+        height: 60%;
+    }
+    .table2, .table3 {
+        width: 33%;
+        height: 60%;
+    }
+    .idTables {
+        margin-top: 0px;
+    }
+    .table_at_a_glance_by_party.table-sm.table-striped {
+        width:100%
+    }
+    .card-body {
+        font-size: 1.5em;
+    }
+    .footer {
+        font-size: 2em;;
+    }
+}
+@media (min-width: 992px) {
+    .page_container {
+        display: grid;
+        grid-template-columns: 2% 20% 2% auto 4%;
+        grid-template-rows: 3% 7.5% 15% 2% 5% 2% auto 2% 5% 3%;
+        width: 100%;
+        height: 100vh;
+    }
+    .header {
+        font-weight: 600;
+        font-size: 4em;
+        text-align: center;
+        grid-column: 2/5;
+        grid-row: 2/3;
+        width: 100%;
+        height: 100%;
+    }
+    .content, .content_tables {
+        margin-top: 4%;
+    }
+    a.dropdown-item {
+        font-size: 1.25em;
+    }
+    .card-body {
+        font-size: 2em;
+    }
+    .footer {
+        font-size: 2em;
+    }
+}@media (min-width: 1200px) {
+    .page_container {
+        display: grid;
+        grid-template-columns: 2% 15% 2% auto 4%;
+        grid-template-rows: 3% 12% 20% 2% 5% 2% auto 2% 5% 3%;
+        width: 100%;
+        height: 100vh;
+    }
+    header {
+        font-weight: 600;
+        font-size: xx-large;
+        text-align: center;
+        grid-column: 2/5;
+        grid-row: 2/3;
+        width: 100%;
+        height: 100%;
+    }
+    img.logo {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        width: 100%;
+        height: 100%;
+    }
+    img.congress {
+        grid-column: 4/5;
+        grid-row: 3/4;
+        width: 100%;
+        height: 100%;
+    }
+    .footer {
+        font-size: 1.5em;
+    }
+}

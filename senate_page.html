@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="./resources/css/main.css">
+    </head>
+    <body>
+        <div class="page_container">
+            <a class="header" href="home_page.html">UNITED STATES CONGRESS</a>
+            <img class="logo" src="./resources/images/logo.png" alt="Logo">
+            <img class="congress" src="./resources/images/congress.jpg" alt="Congress">
+            <div class="navtop">
+                <nav class="navbar navbar-light bg light">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">HOME</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./senate_page.html">Senate</a></li>
+                            <li><a class="dropdown-item" href="./house_page.html">House</a></li>
+                        </ul>
+                    </li> 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ATTENDANCE</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./attendance_senate_page.html">Senate</a></li>
+                            <li><a class="dropdown-item" href="./attendance_house_page.html">House</a></li>
+                        </ul>
+                    </li>     
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PARTY LOYALTY</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="width:80px">
+                            <li><a class="dropdown-item" href="./loyalty_senate_page.html">Senate</a></li>
+                            <li><a class="dropdown-item" href="./loyalty_house_page.html">House</a></li>
+                        </ul>
+                    </li>            
+                </nav>
+            </div>
+            <div class="content">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Senators
+                                </button>
+                            </h2>
+                        </div>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>&nbsp;&nbsp;&nbsp;First convened in 1789, the composition and powers of the Senate are established in 
+                            Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, 
+                            who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, 
+                            including consenting to treaties as a precondition to their ratification and consenting to or confirming 
+                            appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, 
+                            regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal 
+                              officials impeached by the House.</p>
+                        </div>
+                    </div>
+                </div>    
+                <h2>Senate at a glance</h2>
+                <table class="senate_house table table-sm table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="column">FULL NAME</th>
+                            <th scope="column">
+                                <li id="filter_by_party">
+                                    <button id="select_party" class="filter navbar-toggler" type="button" data-toggle="collapse" data-target="#chkSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span>PARTY</span>
+                                    </button>
+                                    <div class="select_party_filter collapse navbar-collapse" id="chkSupportedContent">
+                                        <ul class="navbar-nav mr-auto">
+                                            <li class="checkbox_by_party nav-item dropdown">
+                                                <input type="checkbox" value="D" id="party" checked>
+                                                <label for="members_party">D's</label>
+                                            </li>
+                                            <li class="checkbox_by_party nav-item dropdown">
+                                                <input type="checkbox" value="R" id="party" checked>
+                                                <label for="members_party">R's</label>
+                                            </li>
+                                            <li class="checkbox_by_party nav-item dropdown">
+                                                <input type="checkbox" value="ID" id="party" checked>
+                                                <label for="members_party">I's</label>
+                                            </li>
+                                        </ul>
+                                    </div>    
+                                </li>    
+                            </th>
+                            <th scope="column">
+                                <li id="filter_by_state">
+                                    <button id="select_state" class="filter navbar-toggler" type="button" data-toggle="collapse" data-target="#chkSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span>STATE</span>
+                                    </button>
+                                    <div class="select_state_filter collapse navbar-collapse" id="chkSupportedContent">
+                                        <select name="state-selector" id="state-selector">
+                                            <option value="all" selected>-- All --</option>
+                                        </select>         
+                                    </div>
+                                </li>    
+                            </th>
+                            <th scope="column">SENIORITY</th>
+                            <th scope="column">VOTES PERCENTAGE</th>
+                        </tr>
+                    </thead>
+                    <div id="loading" class="loading">
+                        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                        <!-- <iframe src="https://giphy.com/embed/kZhvGXpT7bOsltxydL" width="100%" height="100px" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> -->
+                    </div>
+                    <tbody id="table_data" class="loading-table">
+                            <td id="items_to_filter"></td>
+                    </tbody>
+                </table>
+            </div>
+            <footer class="footer">
+                <a href="https://www.congress.gov/">VISIT US(a)</a>
+            </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!--<script src="./vendors/senate_113.js"></script>-->
+        <script src="./resources/js/main.js"></script>
+    </body>
+</html>
